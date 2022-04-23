@@ -9,8 +9,21 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-  // ваш код...
+ function isValid(name) {
+  if (name == null) {
+    return false;
+  } else {
+    let checkSpaces = name.replace(' ', '');
+    if (name.length > checkSpaces.length) {
+      return false;
+    } else {
+      if (name.length < 4) {
+        return false;
+      } else {
+          return true;
+      }
+    }
+  }
 }
 
 function sayHello() {
@@ -22,3 +35,5 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
+
+sayHello();
