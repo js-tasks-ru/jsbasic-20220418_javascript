@@ -1,5 +1,4 @@
 function highlight(table) {
-  // ваш код...
   
   const available = table.querySelectorAll('[data-available="true"]');
   for (const i of available) {
